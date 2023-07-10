@@ -12,7 +12,6 @@
                         <div class="col-md-4 pe-md-0">
                             <div class="auth-side-wrapper"
                                 style="background-image: url({{ asset('assets/images/login.png') }})">
-
                             </div>
                         </div>
                         <div class="col-md-8 ps-md-0">
@@ -39,6 +38,7 @@
                                     </div> --}}
                                     <div>
                                         <input class="btn btn-primary me-2 mb-2 mb-md-0" type="submit" value="Login" />
+                                        <a href="{{ route('forget') }}">Lupa password</a>
                                     </div>
                                 </form>
                             </div>
