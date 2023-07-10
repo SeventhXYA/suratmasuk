@@ -31,6 +31,12 @@ Route::group(['middleware' => ['guest']], function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
     //proses autentikasi
     Route::post('authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
+
+    Route::get('forget', [LoginController::class, 'forget'])->name('forget');
+    Route::post('forget', [LoginController::class, 'sendResetEmail'])->name('sendemail');
+
+    Route::get('reset', [LoginController::class, 'reset'])->name('reset');
+    Route::post('reset', [LoginController::class, 'resetPassword'])->name('resetPassword');
 });
 
 //route logout

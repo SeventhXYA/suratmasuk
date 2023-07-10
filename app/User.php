@@ -47,4 +47,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function password_reset()
+    {
+        return $this->hasOne(PasswordReset::class);
+    }
 }
